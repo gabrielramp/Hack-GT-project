@@ -116,7 +116,7 @@ function createBoxes() {
                     if (checkbox.checked) {
                         checked++;
                     } else {
-                        checked--;
+                        Math.max(0, checked-1);
                     }
                     updateCheckboxCount();
                 });
@@ -138,7 +138,7 @@ function createBoxes() {
                     if (checkbox.checked) {
                         checked++;
                     } else {
-                        checked--;
+                        Math.max(0, checked-1);
                     }
                     updateCheckboxCount();
                 });
