@@ -4,7 +4,14 @@
     <title>Day Boxes</title>
     <link rel="stylesheet" type="text/css" href="bitsofgood-style.css"> <!-- New CSS for styling -->
     <link rel="stylesheet" type="text/css" href="daysstyle.css">
-    <script src="code.js"></script>
+    <script>
+        const skill = localStorage.getItem('skill');
+        const days = localStorage.getItem('days');
+
+        document.getElementById('skill'.textContent = skill);
+        document.getElementById('days'.textContent = days);
+
+    </script>
 
 </head>
 <body>
@@ -20,7 +27,7 @@
             <h1>Your Personalized Learning Schedule</h1>
         </div>
     </header>
-
+    <div>Skill:<br><span id="skill"></span></div>
     <main>
         <div class="container">
             <div id="boxContainer" class="box-container"></div>
