@@ -34,7 +34,7 @@ function generatePage() {
 
 // ...
 let totalCheck = 0;
-let checked = 0;
+let checked = localStorage.getItem("checked") ? parseInt(localStorage.getItem("checked")) : 0;
 
 function updateCheckboxCount() {
     const totalCheckValue = document.getElementById("totalCheckValue");
@@ -42,6 +42,8 @@ function updateCheckboxCount() {
 
     totalCheckValue.textContent = totalCheck;
     checkedValue.textContent = checked;
+
+    localStorage.setItem("checked", checked.toString());
 }
 
 // function to create boxes, includes pop-up window code
