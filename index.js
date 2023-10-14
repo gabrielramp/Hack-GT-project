@@ -12,16 +12,16 @@ const chatCompletion = await openai.chat.completions.create({
     messages: [{"role": "user", "content": prompt}],
   });
 
-  var output = chatCompletion.choices[0].message["content"];
-  var separatedOutput = output.split("Day ");
-//   separatedOutput.pop()
-//   separatedOutput.pop()
+var output = chatCompletion.choices[0].message["content"];
+var separatedOutput = output.split("Day ");
 
 for (let i = 0; i < separatedOutput.length; i++) {
   let result = separatedOutput[i].split("|");
   separatedOutput[i] = result;
 }
 
-separatedOutput.splice(0,2);
+separatedOutput.splice(0,1);
+separatedOutput.shift();
+
 console.log(separatedOutput);
 console.log(separatedOutput.length);
