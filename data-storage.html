@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Storage Example</title>
+</head>
+<body>
+    <p id="updatedValue">Updated Value: </p>
+    
+    <script>
+        const inputData = 0;
+        let isChecked = true;
+        let tasksCompleted = 3;
+        var updated = "";
+
+        sessionStorage.setItem("completed", tasksCompleted.toString());
+        let data = Number(sessionStorage.getItem("completed"));
+
+        if (isChecked) {
+            tasksCompleted++;
+            data++;
+            updated = data.toString();
+            sessionStorage.setItem("completed", updated);
+        }
+        
+        // Update the content of the "updatedValue" paragraph with the updated value
+        document.getElementById("updatedValue").textContent += updated;
+    </script>
+</body>
+</html>
