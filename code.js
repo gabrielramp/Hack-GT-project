@@ -34,7 +34,6 @@ function generatePage() {
 
 // ...
 
-// Function to create boxes
 function createBoxes() {
     const numDays = parseInt(document.getElementById("numDays").value);
     const boxContainer = document.getElementById("boxContainer");
@@ -60,11 +59,24 @@ function createBoxes() {
             // Open the pop-up window
             const dayDetailContent = "Details for Day " + i;
             const popupWindow = window.open("", "DayDetails", `width=${popupWidth}, height=${popupHeight}, left=${leftPosition}, top=${topPosition}`);
-            
+
             // Write the content into the pop-up window
-            popupWindow.document.write(`<h2>${dayDetailContent}</h2>`);
-            popupWindow.document.write('<p>This is your day detail.</p>');
-            
+            popupWindow.document.write('<h2 style="text-align: center;">Topic</h2>');
+            popupWindow.document.write('<div style="display: flex;">');
+            popupWindow.document.write('<div style="width: 50%; text-align: center;">');
+            popupWindow.document.write('<h3>Tasks</h3>');
+            // Add checkboxes for tasks
+            popupWindow.document.write('<label><input type="checkbox"> do this work!</label><br>');
+            popupWindow.document.write('<label><input type="checkbox"> do this work!</label>');
+            popupWindow.document.write('</div>');
+            popupWindow.document.write('<div style="width: 50%; text-align: center;">');
+            popupWindow.document.write('<h3>Resources</h3>');
+            // Add checkboxes for resources
+            popupWindow.document.write('<label><input type="checkbox"> do this work!</label><br>');
+            popupWindow.document.write('<label><input type="checkbox"> do this work!</label>');
+            popupWindow.document.write('</div>');
+            popupWindow.document.write('</div>');
+
             // Add a close button in the pop-up
             popupWindow.document.write('<button onclick="window.close()">Close</button>');
         });
@@ -72,5 +84,6 @@ function createBoxes() {
         boxContainer.appendChild(box);
     }
 }
+
 
 // ...
