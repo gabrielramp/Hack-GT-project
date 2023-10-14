@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-     apiKey: "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" // This is also the default, can be omitted
+     apiKey: API_KEY // This is also the default, can be omitted
 });
 
 var numDays = 10;
@@ -22,5 +22,6 @@ for (let i = 0; i < separatedOutput.length; i++) {
   separatedOutput[i] = result;
 }
 
+separatedOutput.splice(0,2);
 console.log(separatedOutput);
 console.log(separatedOutput.length);
