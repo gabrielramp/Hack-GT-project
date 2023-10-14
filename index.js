@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-     apiKey: API_KEY // This is also the default, can be omitted
+     apiKey: "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" // This is also the default, can be omitted
 });
 
 var numDays = 10;
@@ -18,8 +18,9 @@ const chatCompletion = await openai.chat.completions.create({
 //   separatedOutput.pop()
 //   separatedOutput.pop()
   for (var segment of separatedOutput) {
-     var temp = segment.split("|")
-     segment = temp
+     let result = [];
+     let temp = segment.split("|");
+     result.push(temp);
   }
 
   console.log(output);
