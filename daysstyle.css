@@ -18,7 +18,7 @@ body {
   
   .nav-bar a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bolder;
     font-family: sans-serif;
   }
@@ -43,7 +43,7 @@ body {
     display: flex;
     flex-direction: row;
   }
-
+  
 .container {
     max-width: 1200px;
     margin: 0 auto;

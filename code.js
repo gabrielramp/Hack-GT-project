@@ -5,13 +5,42 @@ function redirectToDayPage() {
 
 // script.js
 
-console.log(numOfDays);
+function generatePage() {
+    // Get the values from the input fields and store them in variables
+    const skill = document.getElementById("input1").value;
+    const hoursPerDay = document.getElementById("input2").value;
+    const numOfDays = document.getElementById("input3").value;
+    // Redirect to the "loading.html" page
+    window.location.href = "loading.html";
 
+    // You can use the 'skill', 'hoursPerDay', and 'numOfDays' variables as needed
+    // For example, you can pass them to the 'loading.html' page or perform other operations.
+}
+
+// Function to create boxes
+// script.js
+
+// code.js
+
+// ...
+
+// Function to create boxes
+// code.js
+
+// ...
+
+// Function to create boxes
+// code.js
+
+// ...
+
+// Function to create boxes
 function createBoxes() {
+    const numDays = parseInt(document.getElementById("numDays").value);
     const boxContainer = document.getElementById("boxContainer");
     boxContainer.innerHTML = "";
-    console.log(numOfDays);
-    for (let i = 1; i <= numOfDays; i++) {
+
+    for (let i = 1; i <= numDays; i++) {
         const box = document.createElement("button"); // Create a button element
         box.className = "box";
         box.textContent = "Day " + i;
@@ -43,18 +72,5 @@ function createBoxes() {
         boxContainer.appendChild(box);
     }
 }
-document.addEventListener("DOMContentLoaded", function () {
-    // Call createBoxes function with the desired number of days (e.g., 7)
-    console.log("HI");
-    createBoxes();
-});
-
-function generatePage() {
-    // Get the skill from the input field
-    const skill = document.getElementById("input1").value;
-    window.location.href = "loading.html";
-    // Redirect to the "progress.html" page with the skill as a query parameter
-}
-
 
 // ...
