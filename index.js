@@ -24,4 +24,3 @@ separatedOutput.splice(0,1);
 separatedOutput.shift();
 
 console.log(separatedOutput);
-console.log(separatedOutput.length);
