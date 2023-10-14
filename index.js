@@ -1,7 +1,36 @@
 import OpenAI from 'openai';
+import bodyParser from 'body-parser';
+import express from "express";
+import cors from "cors";
 
 const openai = new OpenAI({
      apiKey: API_KEY // This is also the default, can be omitted
+});
+
+const app = express();
+const port = 3000;
+
+
+app.use(bodyParser.json());
+app.use(cors());
+
+app.get("/", async (req, res) => { 
+
+    const { message } = req.body;
+
+    const completion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{"role": "user", "content": "Hello!"}],
+        
+      })
+      res.json ({
+            completion: completion.choices[0].message["content"]
+      })
+
+});
+
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}/`);
 });
 
 var numDays = 10;
@@ -19,6 +48,8 @@ for (let i = 0; i < separatedOutput.length; i++) {
   let result = separatedOutput[i].split("|");
   separatedOutput[i] = result;
 }
+
+
 
 separatedOutput.splice(0,1);
 separatedOutput.shift();
