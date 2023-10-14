@@ -1,9 +1,19 @@
-#input2 {
-    width: 200px; /* You can adjust the width as needed */
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
+
+.container {
+    text-align: center;
+}
+
 h1{
-    text-align: center;
+    margin-bottom: 60px;
 }
-body{
-    text-align: center;
+#input2{
+    width: 200px;
 }

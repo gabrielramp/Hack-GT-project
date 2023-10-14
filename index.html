@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>SkillMap</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
         function generatePage() {
             // Redirect the current page to the "Loading" page
@@ -11,21 +11,23 @@
     </script>
 </head>
 <body>
-    <h1>SkillMap</h1>
-    
-    <!-- First Input Box -->
-    <label for="input1">I want to learn</label>
-    <input type="text" id="input1" name="input1" placeholder="Enter skill here">
-    
-    <!-- Second Input Box -->
-    <label for="input2">with a time commitment of</label>
-    <input type="text" id="input2" name="input2" placeholder="Enter number of hours per day">
-    
-    <!-- Third Input Box -->
-    <label for "input3">in</label>
-    <input type="text" id="input3" name="input3" placeholder="Enter number of days">
-    
-    <!-- Generate Button -->
-    <button onclick="generatePage()">Generate</button>
+    <div class="container">
+        <h1>SkillMap</h1>
+        
+        <!-- First Input Box -->
+        <label for="input1">I want to learn</label>
+        <input type="text" id="input1" name="input1" placeholder="Enter skill here">
+        
+        <!-- Second Input Box -->
+        <label for="input2">with a time commitment of</label>
+        <input type="text" id="input2" name="input2" placeholder="Enter number of hours per day">
+        
+        <!-- Third Input Box -->
+        <label for="input3">in</label>
+        <input type="text" id="input3" name="input3" placeholder="Enter number of days">
+        
+        <!-- Generate Button -->
+        <button onclick="generatePage()">Generate</button>
+    </div>
 </body>
 </html>
