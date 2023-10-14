@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-     apiKey: "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" // This is also the default, can be omitted
+     apiKey: API_KEY // This is also the default, can be omitted
 });
 
 var numDays = 10;
