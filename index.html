@@ -2,7 +2,13 @@
 <html>
 <head>
     <title>SkillMap</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function generatePage() {
+            // Redirect the current page to the "Loading" page
+            window.location.href = "loading.html";
+        }
+    </script>
 </head>
 <body>
     <h1>SkillMap</h1>
@@ -16,7 +22,10 @@
     <input type="text" id="input2" name="input2" placeholder="Enter number of hours per day">
     
     <!-- Third Input Box -->
-    <label for="input3">in</label>
+    <label for "input3">in</label>
     <input type="text" id="input3" name="input3" placeholder="Enter number of days">
+    
+    <!-- Generate Button -->
+    <button onclick="generatePage()">Generate</button>
 </body>
 </html>
