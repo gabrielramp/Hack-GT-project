@@ -9,26 +9,18 @@
     <ul class="nav-bar" id="nav">
         <div class="links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Your Progress</a></li>
+          <li><a href="progress.html">Your Progress</a></li>
           <li><a href="#">About Us</a></li>
         </div>
       </ul>
     <header class="header">
         <div class="container">
-            <h1>Your Personalized Learning Schedule</h1>
-            <div>Skill:<span id="skill"></span></div>
+            <h1>Your Personalized Learning Schedule:</h1>
+            <div><span id="skill"></span></div>
         </div>
     </header>
     <main>
         <div class="container">
-            <!-- Input for number of days -->
-            <label for="numDays">Enter the number of days: </label>
-            <input type="number" id="numDays" placeholder="Enter a number">
-            
-            <!-- Button to create boxes -->
-            <button onclick="createBoxes()" class="create-button">Create Boxes</button>
-            
-            <!-- Container for the boxes -->
             <div id="boxContainer" class="box-container"></div>
         </div>
     </main>
@@ -37,10 +29,17 @@
         document.getElementById('skill').textContent = skill;
 
     function createBoxes() {
+    const days = localStorage.getItem('days');
+    if (!days) {
+        console.error('Number of days is missing in localStorage.');
+        return;
+    }
+    const numDays = parseInt(days, 10);
+
     const boxContainer = document.getElementById("boxContainer");
     boxContainer.innerHTML = "";
-    console.log(days);
-    for (let i = 1; i <= days; i++) {
+
+    for (let i = 1; i <= numDays; i++) {
         const box = document.createElement("button"); // Create a button element
         box.className = "box";
         box.textContent = "Day " + i;
@@ -72,6 +71,9 @@
         boxContainer.appendChild(box);
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+            createBoxes();
+        });
     </script>
 </body>
 </html>

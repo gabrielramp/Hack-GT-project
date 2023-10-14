@@ -1,59 +1,52 @@
-<!DOCTYPE html>
-<html>
 <head>
     <title>SkillMap</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
-<<<<<<< HEAD
-    const form = document.getElementById("form");
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const skillV = document.getElementById("input1").value;
-    const hoursV = document.getElementById("input2").value;
-    const daysV = document.getElementById("input3").value;
-
-    localStorage.setItem('skill', skillV);
-    localStorage.setItem('hours', hoursV);
-    localStorage.setItem('days', daysV);
-
-    window.location.href = "loading.html";
-});
-    </script>
-
-=======
-        function generatePage() {
-            // Redirect the current page to the "Loading" page
-            window.location.href = "loading.html";
-        }
-    </script>
->>>>>>> parent of 944e760 (remove the createbox button)
 </head>
 <body>
     <ul class="nav-bar" id="nav">
         <div class="links">
           <li><a href="index.html">Home</a></li>
           <li><a href="#">Your Skills</a></li>
+          <li><a href="progress.html">Your Skills</a></li>
           <li><a href="#">About Us</a></li>
         </div>
       </ul>
-<div class = "container">
-      <h1>SkillMap</h1>
 
-<form id = "form">        
-        <label for="input1">I want to learn</label>
-        <input type="text" id="input1" name="input1" placeholder="Enter skill here">
-        
-        <label for="input2">with a time commitment of</label>
-        <input type="text" id="input2" name="input2" placeholder="Enter number of hours per day">
-        
-        <label for="input3">in</label>
-        <input type="text" id="input3" name="input3" placeholder="Enter number of days">
-        <label for="input1">days!</label>
+        <h1>SkillMap</h1>
+        <form id ="form">
+            <!-- First Input Box -->
+            <label for="skill">I want to learn</label>
+            <input type="text" id="skill" name="skill" placeholder="Enter skill here">
+            
+            <!-- Second Input Box -->
+            <label for="hours">with a time commitment of</label>
+            <input type="text" id="hours" name="hours" placeholder="Enter number of hours per day">
+            
+            <!-- Third Input Box -->
+            <label for="days">in</label>
+            <input type="days" id="days" name="days" placeholder="Enter number of days">
 
-        <button type = "submit">Generate</button>
-    </form>
-</div>
+            <!-- Generate Button -->
+            <button type="submit">Generate</button>
+        </form>
+        <script>
+    
+            const form = document.getElementById('form');
+            const skill = document.getElementById('skill');
+            const days = document.getElementById('days');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const skillValue = skill.value;
+                const daysValue = days.value;
+
+        
+                localStorage.setItem('skill', skillValue);
+                localStorage.setItem('days', daysValue);
+                window.location.href = "loading.html";
+        
+            })
+            </script>
 </body>
 </html>
