@@ -2,29 +2,33 @@
 <html>
 <head>
     <title>Day Boxes</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bitsofgood-style.css"> <!-- New CSS for styling -->
+    <link rel="stylesheet" type="text/css" href="daysstyle.css">
     <script src="code.js"></script>
 </head>
 <body>
-    <h1>Day Boxes</h1>
-    
-    <!-- Input for number of days -->
-    <label for="numDays">Enter the number of days: </label>
-    <input type="number" id="numDays" placeholder="Enter a number">
-    
-    <!-- Button to create boxes -->
-    <button onclick="createBoxes()">Create Boxes</button>
-    
-    <!-- Container for the boxes -->
-    <div id="boxContainer"></div>
-    
-    <!-- Smaller rectangle for day details -->
-    <div id="dayDetail" class="day-detail">
-        <span id="closeBtn" class="close-button">✖</span>
-        <div id="dayDetailContent">Details for Day</div>
-    </div>
+    <header class="header">
+        <div class="container">
+            <h1>Your Personalized Learning Schedule</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Input for number of days -->
+            <label for="numDays">Enter the number of days: </label>
+            <input type="number" id="numDays" placeholder="Enter a number">
+            
+            <!-- Button to create boxes -->
+            <button onclick="createBoxes()" class="create-button">Create Boxes</button>
+            
+            <!-- Container for the boxes -->
+            <div id="boxContainer" class="box-container"></div>
+        </div>
+    </main>
 </body>
 </html>
+
 
 
 

@@ -30,6 +30,11 @@ function generatePage() {
 // ...
 
 // Function to create boxes
+// code.js
+
+// ...
+
+// Function to create boxes
 function createBoxes() {
     const numDays = parseInt(document.getElementById("numDays").value);
     const boxContainer = document.getElementById("boxContainer");
@@ -42,15 +47,26 @@ function createBoxes() {
 
         // Add a click event to open the day detail
         box.addEventListener("click", function () {
-            const dayDetail = document.getElementById("dayDetail");
-            dayDetail.style.display = "block";
-            const dayDetailContent = document.getElementById("dayDetailContent");
-            dayDetailContent.textContent = "Details for Day " + i;
+            // Calculate the width and height for the pop-up window (3/4 of the screen)
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            const popupWidth = Math.floor(screenWidth * 0.75);
+            const popupHeight = Math.floor(screenHeight * 0.75);
 
-            const closeBtn = document.getElementById("closeBtn");
-            closeBtn.addEventListener("click", function () {
-                dayDetail.style.display = "none";
-            });
+            // Calculate the position for centering the pop-up window
+            const leftPosition = (screenWidth - popupWidth) / 2;
+            const topPosition = (screenHeight - popupHeight) / 2;
+
+            // Open the pop-up window
+            const dayDetailContent = "Details for Day " + i;
+            const popupWindow = window.open("", "DayDetails", `width=${popupWidth}, height=${popupHeight}, left=${leftPosition}, top=${topPosition}`);
+            
+            // Write the content into the pop-up window
+            popupWindow.document.write(`<h2>${dayDetailContent}</h2>`);
+            popupWindow.document.write('<p>This is your day detail.</p>');
+            
+            // Add a close button in the pop-up
+            popupWindow.document.write('<button onclick="window.close()">Close</button>');
         });
 
         boxContainer.appendChild(box);

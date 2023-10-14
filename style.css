@@ -24,20 +24,10 @@ h1{
     width: 200px;
 }
 /* styles.css */
-.box {
-    width: 100px; /* Increase box width */
-    height: 100px; /* Increase box height */
-    background-color: #3498db;
-    margin: 5px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px; /* Center text vertically */
-}
 
 .loader {
-    border: 6px solid #ffcbcb;
-    border-top: 6px solid #db8234;
+    border: 6px solid #ffc55a;
+    border-top: 6px solid #ff7574;
     border-radius: 50%;
     margin-left: 100px;
     width: 30px;
@@ -54,3 +44,4 @@ p {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
