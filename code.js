@@ -25,13 +25,18 @@ function generatePage() {
 // ...
 
 // Function to create boxes
+// code.js
+
+// ...
+
+// Function to create boxes
 function createBoxes() {
     const numDays = parseInt(document.getElementById("numDays").value);
     const boxContainer = document.getElementById("boxContainer");
     boxContainer.innerHTML = "";
 
     for (let i = 1; i <= numDays; i++) {
-        const box = document.createElement("div");
+        const box = document.createElement("button"); // Create a button element
         box.className = "box";
         box.textContent = "Day " + i;
 
