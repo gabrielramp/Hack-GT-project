@@ -69,6 +69,9 @@ h1 {
     color:#ffe8b9;
 
 }
+h2{
+  color: #ff7574;
+}
 
 .left-section, .right-section {
     width: 50%;
@@ -79,14 +82,19 @@ h1 {
 
 .progress-bar {
     border: 1px solid #ccc;
-    background-color: #f2f2f2;
+    background-color: white;
     border-radius: 5px;
     height: 20px;
     height: 20px;
-    background-color: #4CAF50; /* Default background color for progress */
+    background-color: #c9ff9f; /* Default background color for progress */
     width: var(--progress-width); /* Use the variable for progress width */
     border-radius: 5px;
     transition: width 0.5s; /* Smooth transition */
+}
+
+#your-skill{
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .progress {
