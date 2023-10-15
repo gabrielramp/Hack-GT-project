@@ -4,7 +4,7 @@ import express from "express";
 import cors from "cors";
 
 const openai = new OpenAI({
-     apiKey: API_KEY // This is also the default, can be omitted
+     apiKey: API_KEY
 });
 
 var skillTopic = "Java";
@@ -25,18 +25,14 @@ for (let i = 0; i < separatedOutput.length; i++) {
   let result = separatedOutput[i].split("|");
   for (let j = 0; j < result.length; j++) {
     result[j] = result[j].trim();
-    if (result[j] === "") {
+    if (result[j] === "" || result[j] === '') {
       result.splice(j,1);
     }
   }
   separatedOutput[i] = result;
 }
 
-
-
 separatedOutput.splice(0,1);
 separatedOutput.shift();
 
-
 console.log(separatedOutput);
-console.log("The topic of the third day is: " + separatedOutput[2][1])
