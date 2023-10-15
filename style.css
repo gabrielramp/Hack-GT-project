@@ -21,15 +21,16 @@ background: radial-gradient(circle, rgba(255,117,116,1) 35%, rgba(255,201,104,1)
     --header-font: 'HK Grotesk', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 input[type="text"] {
-  background-color: #ffd994; /* Background color */
+  background-color: #fff3db; /* Background color */
   border-radius: 10px; /* Rounded corners */
   border-color: #ffc55a;
-  padding: 5px;
+  padding: 7px;
 }
 
 /* Style the placeholder text for input boxes */
 input[type="text"]::placeholder {
   color: #aa8000; /* Darker yellow color for the placeholder text */
+  font-size: 20px;
 }
 
 #header {
@@ -106,6 +107,7 @@ input[type="text"]::placeholder {
 
 h1{
     margin-bottom: 60px;
+    color: white;
 }
 #input2{
     width: 200px;
@@ -124,7 +126,7 @@ h1{
 
 p {
     font-size: 16px;
-    color: #555;
+    color: white;
 }
 img {
   max-width: 160px; /* Adjust the width as needed */
@@ -137,6 +139,8 @@ img {
 }
 #form{
   font-size: 30px;
+  width: fit-content;
+  padding-bottom: 30px;
   font-weight: bold;
   max-width: 75%; /* Limit the width to 75% of the page */
   margin: 0 auto; /* Center the form horizontally */  text-align: center;
@@ -162,4 +166,11 @@ img {
 #form button[type="submit"]:hover {
   background-color: #ffc55a; /* Change background color on hover */
   color: white; /* Change text color on hover */
+}
+
+#maintitle{
+  font-family: "Cutive Mono", monospace;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 10px; 
 }

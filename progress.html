@@ -50,8 +50,12 @@ skillDisplay.textContent = skill;
         const totalCheck = 100; // Replace with your value
         
         // Calculate the percentage
-        const percent = (checked / totalCheck) * 100;
-        
+        const totalCheckValue = parseInt(document.getElementById("totalCheckValue").textContent);
+        const checkedValue = parseInt(document.getElementById("checkedValue").textContent);
+
+        // Calculate the percentage
+        const percent = (checkedValue / totalCheckValue) * 100;
+
         // Set the progress width in CSS custom property
         document.documentElement.style.setProperty('--progress-width', percent + '%');
         </script>
