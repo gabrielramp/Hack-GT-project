@@ -18,6 +18,15 @@ body {
 :root {
     --header-font: 'HK Grotesk', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+input[type="text"] {
+  background-color: #ffd994; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the placeholder text for input boxes */
+input[type="text"]::placeholder {
+  color: #aa8000; /* Darker yellow color for the placeholder text */
+}
 
 #header {
   font-family: var(--header-font);
