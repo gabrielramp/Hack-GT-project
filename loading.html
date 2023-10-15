@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>Loading Page</title>
-    <script src="./prompt.js"></script>
+    <script type="module" src="prompt.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="loader"></div>
         <script>
-            document.addEventListener("DOMContentLoaded", async function() {
+            document.addEventListener("DOMContentLoaded", function() {
                 console.log("in async function");
                 var chatProcessor = new RoadMapper();
-                const output = await chatProcessor.processChat();
+                const output = chatProcessor.processChat();
                 localStorage.setItem("output", JSON.stringify(output, null, 2));
                 console.log("async function has finished");
                 window.location.href = "days.html";
