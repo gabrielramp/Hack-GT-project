@@ -2,20 +2,25 @@
 <html>
 <head>
     <title>Loading Page</title>
-    <script src="code.js"></script>
+    <script src="./prompt.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-        <div class="container">
+    <div class="container">
         <div class="loader"></div>
         <script>
-            setTimeout(function () {
-            window.location.href = "days.html";
-            }, 2000);
+            document.addEventListener("DOMContentLoaded", async function() {
+                console.log("in async function");
+                var chatProcessor = new RoadMapper();
+                const output = await chatProcessor.processChat();
+                localStorage.setItem("output", JSON.stringify(output, null, 2));
+                console.log("async function has finished");
+                window.location.href = "days.html";
+              });
         </script>
-            <h1>Loading...</h1>
-            <p>Please wait while we retrieve the data...</p>
-        </div>
+            <h1>Loading...</h1>
+            <p>Please wait while we retrieve the data...</p>
+        </div>
     </body>
 </html>
 
