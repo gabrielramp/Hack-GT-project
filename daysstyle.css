@@ -111,3 +111,49 @@ input[type="number"] {
     font-size: 60px;
     font-weight: bold;
 }
+/* Add styles for the pop-up window */
+.popup-container {
+  width: 75%; /* Adjust the width as needed */
+  max-width: 600px; /* Set a maximum width if necessary */
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style the "Topic" header */
+.popup-container h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style the sections (Tasks and Resources) */
+.popup-section {
+  display: inline-block;
+  width: 48%; /* Adjust the width to split the sections */
+  margin: 10px;
+  text-align: center;
+}
+
+/* Style the checkboxes */
+.popup-section input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style the "Close" button */
+.popup-container button {
+  background-color: #f38d6a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.popup-container button:hover {
+  background-color: #ffc55a;
+}
