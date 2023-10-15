@@ -9,10 +9,10 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #ffd994;
     font-family: var(--header-font);
 }
 :root {
@@ -20,30 +20,57 @@ body {
 }
 
 #header {
-    font-family: var(--header-font);
-    color: #333;
+  font-family: var(--header-font);
+  color: white;
+  font-size: var(--header-text-size);
+  text-align: center;
+  margin-top: 20px;
+  animation: welcomeAnimation 2s ease-in-out; /* Add animation */
+}
+
+/* Define the animation keyframes */
+@keyframes welcomeAnimation {
+  0% {
+      transform: scale(1); /* Initial scale */
+      opacity: 0; /* Start with 0% opacity */
+  }
+  50% {
+      transform: scale(1.2); /* Scale up to 120% size */
+      opacity: 1; /* Reach 100% opacity */
+  }
+  100% {
+      transform: scale(1); /* Return to normal scale */
+      opacity: 1; /* Maintain 100% opacity */
+  }
 }
 
 .nav-bar {
-    background-color: #1d1d1d;
+    background-color: #ff7574;
     color: #fff;
+    height: 50px;
     margin: 0;
-    padding: 10px 0;
     position: fixed; /* Position the navigation bar at the top */
     top: 0; /* Stick it to the top */
     left: 0; /* Align it to the left */
     width: 100%; /* Make it span the entire width */
+
   }
+  img {
+      max-width: 160px; /* Adjust the width as needed */
+      margin-bottom: 20px; /* Adjust the margin as needed */
   
+  }
   .nav-bar a {
     text-decoration: none;
     color: white;
+    margin-left: 40px;
     font-weight: bolder;
     font-family: sans-serif;
+    top: 30px;
   }
   
   .nav-bar a:hover {
-    color: #ff7574;
+    color: #ffd994;
     transition: color 0.3s;
   }
   
